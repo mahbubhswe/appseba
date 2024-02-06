@@ -16,7 +16,7 @@ import { SocialIcon } from "react-social-icons";
 import { useRouter } from "next/navigation";
 
 export default function Footer() {
-    const router = useRouter();
+  const router = useRouter();
   var today = new Date();
   return (
     <Box
@@ -95,9 +95,9 @@ export default function Footer() {
                 Our Mobile App
               </h1>
               <p>
-                You can access our all services from a single touch point
-                through mobile app. Just click on download button bellow.That's
-                it.
+                {
+                  "You can access our all services from a single touch point through mobile app. Just click on download button bellow.That's it."
+                }
               </p>
               <Button
                 size="large"
@@ -116,9 +116,7 @@ export default function Footer() {
             </div>
           </Box>
         </Stack>
-        <p>
-          © {today.getFullYear()} App Seba All rights reserved
-        </p>
+        <p>© {today.getFullYear()} App Seba All rights reserved</p>
       </Container>
     </Box>
   );
