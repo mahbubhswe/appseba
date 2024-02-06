@@ -44,7 +44,6 @@ export default function ProjectCompleted() {
             sx={{
               display: "grid",
               placeContent: "center",
-              width: "341px",
             }}
           >
             <Stack
@@ -83,7 +82,6 @@ export default function ProjectCompleted() {
             sx={{
               display: "grid",
               placeContent: "center",
-              width: "341px",
             }}
           >
             <Stack

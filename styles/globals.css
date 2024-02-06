@@ -20,7 +20,6 @@ html {
   box-shadow: 0 -4px 17px rgba(78, 75, 102, 0.15);
   background-image: radial-gradient(circle, #f1c3c8 0%, #fff9f9 60%);
   transition: all 0.5s;
-  position: relative;
 }
 .serviceCard:hover {
   border: 0px;

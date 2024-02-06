@@ -25,7 +25,7 @@ export default function OurServices() {
         sx={{ py: "50px" }}
       >
         {ourServices.map((item, index) => (
-          <Box key={index} sx={{ width: "350px" }} className="serviceCard">
+          <Box key={index}  className="serviceCard">
             <Typography
               component={"h2"}
               variant="bold"

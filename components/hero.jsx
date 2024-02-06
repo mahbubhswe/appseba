@@ -22,12 +22,13 @@ export default function Hero() {
         <Stack
           direction={{ xs: "column-reverse", sm: "column-reverse", md: "row" }}
           justifyContent="space-between"
+          alignItems={'center'}
         >
           <Fade duration={3000}>
             <Box
               className="heroGlowEffect"
               sx={{
-                height: { xs: "500px", sm: "500px", md: "600px" },
+                height: { xs: "400px", sm: "400px", md: "600px" },
                 display: "grid",
                 placeContent: "center",
                 p: "25px",
@@ -42,7 +43,7 @@ export default function Hero() {
                 {"Let's Fly With Technology!"}
               </Typography>
               <Typography>
-                App Seba is a Bangladeshi software development company
+                App Seba is a software development company
                 specializing in crafting innovative mobile and web applications.
                 Their team of skilled developers helps businesses bring their
                 ideas to life, fostering growth and efficiency through
