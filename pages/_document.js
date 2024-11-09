@@ -9,6 +9,10 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          <meta
+            name="google-site-verification"
+            content="-FzUoSgyGO5iNnFRnAdGQI7XYaAWosXzDrbjl1X8cZU"
+          />
           {/* PWA primary color */}
           <meta name="theme-color" content={theme.palette.primary.main} />
           <link rel="shortcut icon" href="/static/favicon.ico" />

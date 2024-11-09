@@ -56,7 +56,7 @@ export default function Footer() {
                   </Avatar>
                 </ListItemAvatar>
                 <ListItemText
-                  primary="appsebaxyz@gmail.com"
+                  primary="info@appseba.com"
                   secondary="Email Address"
                 />
               </ListItem>

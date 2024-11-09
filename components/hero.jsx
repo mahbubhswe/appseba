@@ -22,7 +22,8 @@ export default function Hero() {
         <Stack
           direction={{ xs: "column-reverse", sm: "column-reverse", md: "row" }}
           justifyContent="space-between"
-          alignItems={'center'}
+          alignItems={"center"}
+          spacing={{ xs: 2, md: 4 }} // Adjust spacing for mobile and desktop
         >
           <Fade duration={3000}>
             <Box
@@ -31,19 +32,21 @@ export default function Hero() {
                 height: { xs: "400px", sm: "400px", md: "600px" },
                 display: "grid",
                 placeContent: "center",
-                p: "25px",
+                p: { xs: "15px", sm: "25px" }, // Reduced padding for mobile
               }}
             >
               <Typography
                 component={"h1"}
-                sx={{ fontSize: "35px", color: "#009CFF" }}
+                sx={{ fontSize: { xs: "28px", sm: "35px" }, color: "#009CFF" }} // Adjusted font size for mobile
                 variant="bold"
                 fontWeight={1000}
               >
                 {"Let's Fly With Technology!"}
               </Typography>
-              <Typography>
-                App Seba is a software development company
+              <Typography sx={{ fontSize: { xs: "14px", sm: "16px" } }}>
+                {" "}
+                {/* Adjusted font size for mobile */}
+                App Seba is a Bangladeshi software development company
                 specializing in crafting innovative mobile and web applications.
                 Their team of skilled developers helps businesses bring their
                 ideas to life, fostering growth and efficiency through
@@ -72,7 +75,7 @@ export default function Hero() {
               height: { xs: "500px", sm: "500px", md: "600px" },
               display: "grid",
               placeContent: "center",
-              p: "25px",
+              p: { xs: "15px", sm: "25px" }, // Reduced padding for mobile
             }}
           >
             <HeroAnimation />

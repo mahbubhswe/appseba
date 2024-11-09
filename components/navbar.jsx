@@ -12,10 +12,20 @@ import Image from "next/image";
 import Drawer from "@mui/material/Drawer";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
+import { bgcolor, keyframes } from "@mui/system";
 
 export default function Navbar() {
   const router = useRouter();
   const [openDrawer, setOpenDrawer] = useState(false);
+
+  const slideIn = keyframes`
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  `;
 
   return (
     <Fragment>
@@ -76,54 +86,108 @@ export default function Navbar() {
       </AppBar>
       <Drawer
         open={openDrawer}
-        elevation={1}
+        anchor="left"
+        PaperProps={{
+          sx: {
+            backgroundColor: "grey",
+            backdropFilter: "blur(10px)",
+            animation: `${slideIn} 0.5s ease`,
+            height: "100vh",
+            width: "80vw",
+            maxWidth: "280px",
+            p: "20px",
+            borderTopRightRadius: "16px",
+            borderBottomRightRadius: "16px",
+            boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.25)",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+          },
+        }}
         onClose={() => setOpenDrawer(false)}
       >
-        <Box sx={{ height: "100vh", width: "100vw", p: "20px" }}>
+        <Box sx={{ display: "flex", flexDirection: "column", height: "100%" }}>
           <Stack
-            direction="column"
-            justifyContent="flex-start"
-            alignItems="flex-start"
+            spacing={2}
             sx={{
-              backgroundColor: "white",
-              p: "25px",
-              borderRadius: "12px",
-              boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
+              width: "100%",
+              mt: 1,
+              mb: 2,
             }}
           >
-            <h2
+            <div
               style={{
-                width: "100%",
-                color: "#009CFF",
-                textShadow: "5px 5px 25px #009CFF",
-                borderBottom: "2px solid #009CFF",
+            
+                display: "grid",
+                placeItems: "center",
+                textAlign: "center", // Ensures text is centered within the grid
               }}
             >
-              Menu
-            </h2>
+              <Image
+                src={"/logo.png"}
+                style={{ borderRadius: "50px" }}
+                height={80}
+                width={80}
+                quality={100}
+              />
+              <Typography
+                variant="h6"
+                noWrap
+                component="a"
+                href="/"
+                sx={{
+                  mr: 2,
+                  color: "white",
+                  fontFamily: "monospace",
+                  fontWeight: 700,
+                  letterSpacing: ".3rem",
+                  textDecoration: "none",
+                }}
+              >
+                APPSEBA
+              </Typography>
+            </div>
+
             {navItems.map((item, index) => (
               <Button
-                sx={{ color: "grey" }}
+                sx={{
+                  color: "white",
+                  fontWeight: "bold",
+                  justifyContent: "flex-start",
+                  width: "100%",
+                  textTransform: "none",
+                  "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                  px: 2,
+                }}
                 key={index}
                 onClick={() => {
                   router.push(item.link);
                   setOpenDrawer(false);
                 }}
+                startIcon={item.icon}
               >
                 {item.title}
               </Button>
             ))}
-            <Button
-              variant="outlined"
-              color="error"
-              sx={{ borderRadius: "50px" }}
-              size="small"
-              onClick={() => setOpenDrawer(false)}
-              startIcon={<CloseIcon />}
-            >
-              Close
-            </Button>
           </Stack>
+          <Button
+            variant="outlined"
+            color="error"
+            sx={{
+              borderRadius: "50px",
+              mt: "auto",
+              mb: 2,
+              width: "100%",
+              textTransform: "none",
+              color: "white",
+              borderColor: "white",
+            }}
+            size="medium"
+            onClick={() => setOpenDrawer(false)}
+            startIcon={<CloseIcon />}
+          >
+            Close
+          </Button>
         </Box>
       </Drawer>
     </Fragment>

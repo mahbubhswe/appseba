@@ -71,7 +71,7 @@ export default function ProjectCompleted() {
                   textShadow: "5px 5px 25px #009CFF",
                 }}
               >
-                <CountUp end={25} />+
+                <CountUp end={35} />+
               </h1>
             </Stack>
           </Box>
@@ -109,7 +109,7 @@ export default function ProjectCompleted() {
                   textShadow: "5px 5px 25px #009CFF",
                 }}
               >
-                <CountUp end={15} />+
+                <CountUp end={30} />+
               </h1>
             </Stack>
           </Box>

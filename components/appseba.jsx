@@ -26,6 +26,7 @@ export default function Appseba() {
             alt="AppSeba logo"
             height={150}
             width={150}
+            style={{borderRadius:"25px"}}
             quality={100}
           />
         </Typography>
