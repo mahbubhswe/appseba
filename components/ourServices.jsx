@@ -12,7 +12,7 @@ export default function OurServices() {
     <Container maxWidth={"lg"} sx={{ py: "50px" }}>
       <Typography
         component={"h1"}
-        sx={{ fontSize: "35px", color: "#009CFF" }}
+        sx={{ fontSize: "35px", color: "#CC2D3C" }}
         variant="bold"
         fontWeight={1000}
         align="center"
@@ -25,7 +25,7 @@ export default function OurServices() {
         sx={{ py: "50px" }}
       >
         {ourServices.map((item, index) => (
-          <Box key={index}  className="serviceCard">
+          <Box key={index} className="serviceCard">
             <Typography
               component={"h2"}
               variant="bold"

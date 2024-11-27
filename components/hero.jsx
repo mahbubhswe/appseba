@@ -37,7 +37,7 @@ export default function Hero() {
             >
               <Typography
                 component={"h1"}
-                sx={{ fontSize: { xs: "28px", sm: "35px" }, color: "#009CFF" }} // Adjusted font size for mobile
+                sx={{ fontSize: { xs: "28px", sm: "35px" }, color: "#CC2D3C" }} // Adjusted font size for mobile
                 variant="bold"
                 fontWeight={1000}
               >

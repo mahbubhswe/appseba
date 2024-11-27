@@ -7,10 +7,14 @@ import technologySvg from "../utils/technologySvg";
 import Marquee from "react-fast-marquee";
 export default function TechnologyWeLove() {
   return (
-    <Container className="glowEffect"  maxWidth="lg" sx={{ py: "50px" ,textAlign:"center"}}>
+    <Container
+      className="glowEffect"
+      maxWidth="lg"
+      sx={{ py: "50px", textAlign: "center" }}
+    >
       <Typography
         component={"h1"}
-        sx={{ fontSize: "35px", color: "#009CFF" }}
+        sx={{ fontSize: "35px", color: "#CC2D3C" }}
         variant="bold"
         fontWeight={1000}
       >

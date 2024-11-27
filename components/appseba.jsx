@@ -26,14 +26,14 @@ export default function Appseba() {
             alt="AppSeba logo"
             height={150}
             width={150}
-            style={{borderRadius:"25px"}}
+            style={{ borderRadius: "25px" }}
             quality={100}
           />
         </Typography>
 
         <Typography
           component={"h1"}
-          sx={{ fontSize: "35px", color: "#009CFF" }}
+          sx={{ fontSize: "35px", color: "#CC2D3C" }}
           variant="bold"
           fontWeight={1000}
         >
@@ -52,7 +52,7 @@ export default function Appseba() {
             py: "12px",
           }}
           color="customPrimary"
-          onClick={() => router.push("mailto:appsebaxyz@gmail.com")}
+          onClick={() => router.push("mailto:appsebademo@gmail.com")}
         >
           Hire Us Today!
         </Button>

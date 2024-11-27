@@ -51,30 +51,33 @@ export default function Footer() {
             <List>
               <ListItem>
                 <ListItemAvatar>
-                  <Avatar>
-                    <EmailIcon />
+                  <Avatar sx={{ backgroundColor: "#CC2D3C", padding: 2 }}>
+                    <EmailIcon sx={{ color: "white" }} />
                   </Avatar>
                 </ListItemAvatar>
                 <ListItemText
-                  primary="info@appseba.com"
-                  secondary="Email Address"
+                  secondary="info@appseba.com"
+                  primary="Email"
                 />
               </ListItem>
               <ListItem>
                 <ListItemAvatar>
-                  <Avatar>
-                    <PhoneIcon />
+                  <Avatar sx={{ backgroundColor: "#CC2D3C", padding: 2 }}>
+                    <PhoneIcon sx={{ color: "white" }} />
                   </Avatar>
                 </ListItemAvatar>
-                <ListItemText primary="+8801607415159" secondary="Phone" />
+                <ListItemText secondary="+8801607415159" primary="Phone" />
               </ListItem>
               <ListItem>
                 <ListItemAvatar>
-                  <Avatar>
-                    <BusinessIcon />
+                  <Avatar sx={{ backgroundColor: "#CC2D3C", padding: 2 }}>
+                    <BusinessIcon sx={{ color: "white" }} />
                   </Avatar>
                 </ListItemAvatar>
-                <ListItemText primary="Dhaka Bangladesh" secondary="Address" />
+                <ListItemText
+                  secondary="Mirpur 1, Dhaka Bangladesh"
+                  primary="Address"
+                />
               </ListItem>
             </List>
           </Box>
@@ -88,8 +91,8 @@ export default function Footer() {
             <div>
               <h1
                 style={{
-                  color: "#009CFF",
-                  textShadow: "5px 5px 25px #009CFF",
+                  color: "#CC2D3C",
+                  textShadow: "5px 5px 25px #CC2D3C",
                 }}
               >
                 Our Mobile App

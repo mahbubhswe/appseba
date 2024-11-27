@@ -30,7 +30,7 @@ export default function Navbar() {
   return (
     <Fragment>
       <AppBar
-        position="fixed"
+    
         sx={{ bgcolor: "#FFFFFF", color: "grey", py: "8px" }}
         elevation={1}
       >
@@ -86,7 +86,7 @@ export default function Navbar() {
       </AppBar>
       <Drawer
         open={openDrawer}
-        anchor="left"
+        anchor="right"
         PaperProps={{
           sx: {
             backgroundColor: "grey",
@@ -117,7 +117,6 @@ export default function Navbar() {
           >
             <div
               style={{
-            
                 display: "grid",
                 placeItems: "center",
                 textAlign: "center", // Ensures text is centered within the grid
@@ -170,7 +169,7 @@ export default function Navbar() {
               </Button>
             ))}
           </Stack>
-          <Button
+          {/* <Button
             variant="outlined"
             color="error"
             sx={{
@@ -187,7 +186,7 @@ export default function Navbar() {
             startIcon={<CloseIcon />}
           >
             Close
-          </Button>
+          </Button> */}
         </Box>
       </Drawer>
     </Fragment>

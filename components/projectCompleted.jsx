@@ -21,7 +21,7 @@ export default function ProjectCompleted() {
     >
       <Typography
         component={"h1"}
-        sx={{ fontSize: "35px", color: "#009CFF" }}
+        sx={{ fontSize: "35px", color: "#CC2D3C" }}
         variant="bold"
         fontWeight={1000}
       >
@@ -59,16 +59,16 @@ export default function ProjectCompleted() {
                 style={{
                   padding: "25px",
                   borderRadius: "50%",
-                  border: "3px solid #009CFF",
+                  border: "3px solid #CC2D3C",
                 }}
               />
               <h2>Web Applications</h2>
               <h1
                 style={{
                   fontSize: "35px",
-                  color: "#009CFF",
+                  color: "#CC2D3C",
                   textAlign: "center",
-                  textShadow: "5px 5px 25px #009CFF",
+                  textShadow: "5px 5px 25px #CC2D3C",
                 }}
               >
                 <CountUp end={35} />+
@@ -97,16 +97,16 @@ export default function ProjectCompleted() {
                 style={{
                   padding: "25px",
                   borderRadius: "50%",
-                  border: "3px solid #009CFF",
+                  border: "3px solid #CC2D3C",
                 }}
               />
               <h2>Mobile Applications</h2>
               <h1
                 style={{
                   fontSize: "35px",
-                  color: "#009CFF",
+                  color: "#CC2D3C",
                   textAlign: "center",
-                  textShadow: "5px 5px 25px #009CFF",
+                  textShadow: "5px 5px 25px #CC2D3C",
                 }}
               >
                 <CountUp end={30} />+
