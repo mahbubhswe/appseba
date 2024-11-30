@@ -6,9 +6,9 @@ export default async function handler(req, res) {
     return res.status(405).json({ message: "Method not allowed" });
   }
 
-  const { email } = req.body;
+  const { phone } = req.body;
 
-  if (!email) {
+  if (!phone) {
     return res.status(400).json({ message: "Email is required" });
   }
 
@@ -24,9 +24,9 @@ export default async function handler(req, res) {
   try {
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
-      to: email,
+      to: "abc@gmail.com",
       subject: "Account Deletion Request",
-      text: `Please delete the account associated with the email: ${email}`,
+      text: `Please delete the account associated with the phone: ${phone}`,
     });
 
     res.status(200).json({ message: "Email sent successfully" });
