@@ -29,7 +29,7 @@ export default function Hero() {
             <Box
               className="heroGlowEffect"
               sx={{
-                height: { xs: "400px", sm: "400px", md: "600px" },
+                height: { xs: "250px", sm: "400px", md: "600px" },
                 display: "grid",
                 placeContent: "center",
                 p: { xs: "15px", sm: "25px" }, // Reduced padding for mobile
@@ -72,7 +72,7 @@ export default function Hero() {
 
           <Box
             sx={{
-              height: { xs: "500px", sm: "500px", md: "600px" },
+              height: { xs: "450px", sm: "500px", md: "600px" },
               display: "grid",
               placeContent: "center",
               p: { xs: "15px", sm: "25px" }, // Reduced padding for mobile

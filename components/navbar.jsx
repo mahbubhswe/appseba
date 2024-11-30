@@ -30,7 +30,6 @@ export default function Navbar() {
   return (
     <Fragment>
       <AppBar
-    
         sx={{ bgcolor: "#FFFFFF", color: "grey", py: "8px" }}
         elevation={1}
       >
