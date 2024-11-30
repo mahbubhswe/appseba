@@ -35,7 +35,7 @@ const DeleteAccountForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await fetch("/api/delete-data", {
+    const response = await fetch("/api/delete_data", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
