@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
@@ -11,12 +11,31 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Drawer from "@mui/material/Drawer";
 import MenuIcon from "@mui/icons-material/Menu";
-import CloseIcon from "@mui/icons-material/Close";
-import { bgcolor, keyframes } from "@mui/system";
+import { keyframes } from "@mui/system";
 
 export default function Navbar() {
   const router = useRouter();
   const [openDrawer, setOpenDrawer] = useState(false);
+  const [elevation, setElevation] = useState(0); // State to track elevation based on scroll position
+  const [bgColor, setBgColor] = useState("#FFF9F9"); // Default bg color
+
+  // Handle scroll event to dynamically change elevation and background color
+  const handleScroll = () => {
+    if (window.scrollY > 50) {
+      setElevation(1); // Elevate the AppBar when scrolled down
+      setBgColor("#FFFFFF"); // Change background color to white when elevated
+    } else {
+      setElevation(0); // Reset elevation when at the top
+      setBgColor("#FFF9F9"); // Reset background color to default
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll); // Listen for scroll events
+    return () => {
+      window.removeEventListener("scroll", handleScroll); // Cleanup the event listener on unmount
+    };
+  }, []);
 
   const slideIn = keyframes`
     from {
@@ -30,29 +49,17 @@ export default function Navbar() {
   return (
     <Fragment>
       <AppBar
-        sx={{ bgcolor: "#FFFFFF", color: "grey", py: "8px" }}
-        elevation={1}
+        sx={{
+          bgcolor: bgColor, // Dynamically set the background color
+          color: "grey",
+          py: "8px",
+        }}
+        elevation={elevation} // Dynamically change elevation based on scroll position
       >
         <Container maxWidth={"lg"}>
           <Toolbar>
-            <Image src={"/logo.png"} height={50} width={50} quality={100} />
-            <Typography
-              variant="h6"
-              noWrap
-              component="a"
-              href="/"
-              sx={{
-                mr: 2,
-                display: { xs: "none", md: "flex" },
-                fontFamily: "monospace",
-                fontWeight: 700,
-                letterSpacing: ".3rem",
-                color: "inherit",
-                textDecoration: "none",
-              }}
-            >
-              APPSEBA
-            </Typography>
+            <Image src={"/logo.png"} height={60} width={200} quality={100} />
+
             <Box
               sx={{
                 ml: "auto",
@@ -168,24 +175,6 @@ export default function Navbar() {
               </Button>
             ))}
           </Stack>
-          {/* <Button
-            variant="outlined"
-            color="error"
-            sx={{
-              borderRadius: "50px",
-              mt: "auto",
-              mb: 2,
-              width: "100%",
-              textTransform: "none",
-              color: "white",
-              borderColor: "white",
-            }}
-            size="medium"
-            onClick={() => setOpenDrawer(false)}
-            startIcon={<CloseIcon />}
-          >
-            Close
-          </Button> */}
         </Box>
       </Drawer>
     </Fragment>

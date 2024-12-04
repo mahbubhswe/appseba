@@ -9,7 +9,6 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <title>AppSeba - Mobile & Web Application Development</title>
           <meta
             name="google-site-verification"
             content="-FzUoSgyGO5iNnFRnAdGQI7XYaAWosXzDrbjl1X8cZU"
@@ -17,20 +16,13 @@ export default class MyDocument extends Document {
           {/* PWA primary color */}
           <meta name="theme-color" content={theme.palette.primary.main} />
           <link rel="shortcut icon" href="/static/favicon.ico" />
+
+          {/* Google Fonts: Importing Roboto and Poppins */}
           <link
             rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;600;700&display=swap"
           />
 
-          {/* SEO Meta Tags */}
-          <meta
-            name="description"
-            content="App Seba is a Bangladeshi software development company specializing in innovative mobile and web application solutions, offering custom software development services for businesses."
-          />
-          <meta
-            name="keywords"
-            content="App Seba, software development, mobile app development, web app development, digital services, business solutions, custom software development, Bangladesh tech company"
-          />
           <meta name="author" content="App Seba" />
           <meta name="robots" content="index, follow" />
           <meta
@@ -38,42 +30,10 @@ export default class MyDocument extends Document {
             content="width=device-width, initial-scale=1.0"
           />
 
-          {/* Open Graph / Facebook Meta Tags */}
-          <meta property="og:type" content="website" />
-          <meta
-            property="og:title"
-            content="App Seba - Mobile & Web App Development Company"
-          />
-          <meta
-            property="og:description"
-            content="App Seba offers cutting-edge mobile and web application development services, specializing in creating custom software solutions for businesses in Bangladesh."
-          />
-          <meta
-            property="og:image"
-            content="https://www.appseba.com/static/logo.jpg"
-          />
-          <meta property="og:url" content="https://www.appseba.com" />
-
-          {/* Twitter Meta Tags */}
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:site" content="@appseba" />
-          <meta
-            name="twitter:title"
-            content="App Seba - Mobile & Web App Development"
-          />
-          <meta
-            name="twitter:description"
-            content="App Seba provides innovative software development services, specializing in mobile and web applications, helping businesses grow through custom solutions."
-          />
-          <meta
-            name="twitter:image"
-            content="https://www.appseba.com/static/logo.jpg"
-          />
-
           {/* Inject MUI styles first to match with the prepend: true configuration. */}
           {this.props.emotionStyleTags}
         </Head>
-        <body>
+        <body style={{ fontFamily: "'Roboto', sans-serif" }}>
           <Main />
           <NextScript />
         </body>

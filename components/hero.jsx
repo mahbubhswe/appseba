@@ -55,8 +55,6 @@ export default function Hero() {
   return (
     <Box
       sx={{
-        backgroundColor: "#EEF3EF",
-        boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
         minHeight: "100vh",
         display: "flex",
         alignItems: "center",
@@ -69,6 +67,7 @@ export default function Hero() {
           justifyContent="space-between"
           alignItems="center"
           spacing={{ xs: 2, md: 4 }}
+        
         >
           <Fade duration={3000}>
             <Box

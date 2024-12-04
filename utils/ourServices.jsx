@@ -12,9 +12,9 @@ const ourServices = [
     btnText: "Order Now",
   },
   {
-    title: "App Services(On Play Store & App Store)",
-    des: "App Seba owns and operates multiple app in Google Play Store like Hisabi, Bakir Khata, Personal Account, Meal Manager and more.",
-    link: "https://play.google.com/store/apps/dev?id=6201200837511770410",
+    title: "App Published On Google Play Console ",
+    des: "We offer the following services for your app publication process on Google Play With Some Conditions.",
+    link: "https://www.appseba.com/app_publish_on_google_play",
     btnText: "Get Services",
   },
 ];

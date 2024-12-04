@@ -10,11 +10,15 @@ import {
 } from "@mui/material";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import Appseba from "@/components/appseba";
+import Layout from "../layout";
 
-export default function AppPublication  ()  {
- 
+export default function AppPublication() {
   return (
-    <Container maxWidth="lg">
+    <Layout
+      pageTitle="App Publication on Google Play - App Seba"
+      pageDescription="App Seba offers comprehensive services for app publication on Google Play, including one-time publishing charges, annual maintenance fees, and on-demand app assets. Contact us for more details."
+      pageKeywords="app publication, Google Play, app publishing service, app maintenance, app assets, Google Play listing, mobile app publishing, Bangladesh, app development services"
+    >
       <Appseba />
       <Box sx={{ textAlign: "center" }}>
         <Typography variant="h3" color="primary" gutterBottom>
@@ -133,8 +137,6 @@ export default function AppPublication  ()  {
           }
         }
       `}</style>
-    </Container>
+    </Layout>
   );
-};
-
-
+}
