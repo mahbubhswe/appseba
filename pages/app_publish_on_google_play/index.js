@@ -18,7 +18,7 @@ export default function AppPublication() {
       pageDescription="App Seba offers comprehensive services for app publication on Google Play, including one-time publishing charges, annual maintenance fees, and on-demand app assets. Contact us for more details."
       pageKeywords="app publication, Google Play, app publishing service, app maintenance, app assets, Google Play listing, mobile app publishing, Bangladesh, app development services"
     >
-      <Container maxWidth={"lg"} sx={{ py: "50px" , mt:'50px'}} >
+      <Container maxWidth={"lg"} sx={{ my: "50px" ,mt:"100px"}} >
         <Box sx={{ textAlign: "center" }}>
           <Typography variant="h3" color="primary" gutterBottom>
             App Publication Process on Google Play

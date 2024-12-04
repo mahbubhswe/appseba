@@ -14,7 +14,7 @@ const ourServices = [
   {
     title: "App Published On Google Play Console ",
     des: "We offer the following services for your app publication process on Google Play With Some Conditions.",
-    link: "https://www.appseba.com/app_publish_on_google_play",
+    link: "/app_publish_on_google_play",
     btnText: "Get Services",
   },
 ];
