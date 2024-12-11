@@ -58,7 +58,7 @@ export default function Navbar() {
       >
         <Container maxWidth={"lg"}>
           <Toolbar>
-            <Image src={"/logo.png"} height={60} width={200} quality={100} />
+            <Image src={"/logo.png"} height={35} width={100} quality={100} />
 
             <Box
               sx={{
